@@ -36,7 +36,7 @@ body,
 }
 
 .navigation ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -50,26 +50,26 @@ main {
   transform: translateY(-50%);
 }
 
-.overlay {
+/* .overlay {
   width: 0;
   height: 0;
-  top: 15%;
+  top: 10%;
   left: 0;
-  border-top: 25vw solid white;
-  border-left: 50vw solid white;
-  border-right: 50vw solid white;
-  border-bottom: 25vw solid transparent;
+  border-top: 25vw solid black;
+  border-left: 50vw solid black;
+  border-right: 50vw solid black;
+  border-bottom: 70vw solid transparent;
   position: absolute;
   z-index: 1;
-}
+} */
 
 .carousel {
   justify-content: center;
-  width: 100vw;
-  height: 100vw;
+  width: 200vw;
+  height: 200vw;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -100%;
+  left: -50%;
   border-radius: 50%;
   transform: rotate(0deg);
   transition: 1s;
