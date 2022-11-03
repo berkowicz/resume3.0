@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+html,
+body,
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, black, #8ecdff);
+}
+
+.navigation {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  height: min-content;
+  position: sticky;
+  text-align: right;
+  margin: 20px 0;
+  z-index: 2;
+}
+
+.navigation ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.navigation ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  align-self: center;
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.overlay {
+  width: 0;
+  height: 0;
+  top: 15%;
+  left: 0;
+  border-top: 25vw solid white;
+  border-left: 50vw solid white;
+  border-right: 50vw solid white;
+  border-bottom: 25vw solid transparent;
+  position: absolute;
+  z-index: 1;
+}
+
+.carousel {
+  justify-content: center;
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: 1s;
+}
+
+.item {
+  position: absolute;
+  display: flex;
+}
+
+.about {
+  top: 90%;
+  left: 50%;
+}
+
+.resume {
+  top: 50%;
+  right: 10%;
+  transform: rotate(-90deg);
+}
+
+.projects {
+  top: 10%;
+  left: 50%;
+  transform: rotate(-180deg);
+}
+
+.contacts {
+  top: 50%;
+  left: 10%;
+  transform: rotate(-270deg);
+}

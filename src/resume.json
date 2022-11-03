@@ -1,0 +1,36 @@
+{
+  "resume": {
+    "work": {
+      "work0": {
+        "role": "E-commerce logistics",
+        "company": "House of Dagmar"
+      },
+      "work1": {
+        "role": "Sales & Customer service",
+        "company": "Sundbybergs Stadsnät"
+      },
+      "work2": {
+        "role": "Electrician",
+        "company": "Ravns Elektriska"
+      }
+    },
+    "education": {
+      "education0": {
+        "role": "Fullstack Developer .NET",
+        "company": "Chass Academy"
+      },
+      "education1": {
+        "role": "E-commerce logistics",
+        "company": "IHM Business School"
+      },
+      "education2": {
+        "role": "Furniture Design & Crafting",
+        "company": "Grebbestads Folkhögskola"
+      },
+      "education3": {
+        "role": "Electrician",
+        "company": "Nacka Gymnasium (High school)"
+      }
+    }
+  }
+}
