@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/minesweeper/msstyle.css" />
     <title>Resume</title>
   </head>
   <body>
@@ -17,17 +18,98 @@
           <li><a class="contacts-nav" href="#">Contacts</a></li>
         </ul>
       </nav>
-      <main>
-        <div class="overlay"></div>
-        <section class="carousel">
-          <div class="item about">about</div>
-          <div class="item resume">resume</div>
-          <div class="item projects">projects</div>
-          <div class="item contacts">contacts</div>
+      <main class="main-container">
+        <section class="content-container">
+          <section class="left-container">
+            <img class="profile-pic" src="src/img/profile-pic.jpg" alt="" />
+            <article class="bio"></article>
+            <div class="icon-links">
+              <a
+                class="linkedin-link"
+                href="https://www.linkedin.com/in/daniel-berkowicz-10332b137/"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg"
+              /></a>
+              <a class="github-link" href="https://github.com/berkowicz">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              /></a>
+            </div>
+          </section>
+          <section class="right-container">
+            <div class="item about">about</div>
+            <div class="item resume">
+              <article class="experiance-container">
+                <!-- <div class="exp">
+                  <h2 class="exp-title">Experiance</h2>
+                  <p class="exp-text">
+                    <em><b>E-commerce logistics</b></em>
+                    <br />
+                    <em>House of Dagmar</em>
+                    <br />
+                    <br />
+                    <em><b>Sales & Customer service</b></em>
+                    <br />
+                    <em>Sundbybergs Stadsnät</em>
+                    <br />
+                    <br />
+                    <em><b>Electrician</b></em>
+                    <br />
+                    <em>Ravns Elektriska</em>
+                  </p>
+                </div> -->
+              </article>
+              <article class="education-container">
+                <div class="edu">
+                  <h2 class="edu-title">Education</h2>
+                  <p class="edu-text">
+                    <em><b>Fullstack Developer .NET</b></em>
+                    <br />
+                    <em>Chass Academy</em>
+                    <br />
+                    <br />
+                    <em><b>E-commerce logistics</b></em>
+                    <br />
+                    <em>IHM Business School</em>
+                    <br />
+                    <br />
+                    <em><b>Furniture Design & Crafting</b></em>
+                    <br />
+                    <em>Grebbestads Folkhögskola</em>
+                    <br />
+                    <br />
+                    <em><b>Electrician</b></em>
+                    <br />
+                    <em>Nacka Gymnasium</em>
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="item projects">
+              <section
+                class="game"
+                oncontextmenu="return false;"
+                ondrag="return false;"
+                ondragstart="return false;"
+              >
+                <div class="game-header">
+                  <div class="mines">
+                    Mines: <span id="mines-count">0</span>
+                  </div>
+                  <button class="new-game">Newgame</button>
+                  <div class="time">Time:</div>
+                </div>
+                <div class="mine-feild"></div>
+              </section>
+            </div>
+            <div class="item contacts">contacts</div>
+          </section>
         </section>
       </main>
       <footer></footer>
     </div>
+    <script src="src/minesweeper/msjscript.js"></script>
     <script src="src/script.js"></script>
   </body>
 </html>

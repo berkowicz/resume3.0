@@ -11,11 +11,11 @@ body,
 .container {
   display: flex;
   flex-direction: column;
-  position: relative;
+  /*   position: relative; */
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, black, #8ecdff);
+  background: linear-gradient(to bottom, black, purple);
 }
 
 .navigation {
@@ -26,7 +26,7 @@ body,
   position: sticky;
   text-align: right;
   margin: 20px 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .navigation ul li {
@@ -43,62 +43,150 @@ body,
 main {
   display: flex;
   align-self: center;
-  width: 100vw;
-  height: 100vw;
-  position: absolute;
-  top: 30%;
-  transform: translateY(-50%);
+  justify-content: center;
+  width: 100vh;
+  height: 100vh;
 }
 
-/* .overlay {
-  width: 0;
-  height: 0;
-  top: 10%;
-  left: 0;
-  border-top: 25vw solid black;
-  border-left: 50vw solid black;
-  border-right: 50vw solid black;
-  border-bottom: 70vw solid transparent;
-  position: absolute;
-  z-index: 1;
-} */
-
-.carousel {
+.content-container {
+  display: flex;
   justify-content: center;
-  width: 200vw;
-  height: 200vw;
-  position: absolute;
-  top: -100%;
-  left: -50%;
+  align-self: center;
+  overflow: hidden;
+  width: 90vw;
+  height: 70vh;
+  max-width: 900px;
+  box-shadow: 0 0 20px 5px black;
+  border-radius: 20px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  height: 100%;
+  background-color: gray;
+  border-right: 1px solid black;
+}
+
+.profile-pic {
+  display: flex;
+  width: 70%;
+  align-self: center;
+  height: auto;
   border-radius: 50%;
-  transform: rotate(0deg);
-  transition: 1s;
+}
+
+.icon-links {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-links a {
+  width: 50px;
+  margin: 1em;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 400%;
+  background-color: gray;
+  transform: translateY(0%);
+  transition: 500ms;
 }
 
 .item {
-  position: absolute;
   display: flex;
+  width: 100%;
+  height: 25%;
 }
 
 .about {
-  top: 90%;
-  left: 50%;
+  display: flex;
 }
 
+/* RESUME */
 .resume {
-  top: 50%;
-  right: 10%;
-  transform: rotate(-90deg);
+  display: flex;
+  flex-direction: column;
 }
+
+.resume > * {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding-top: 5em;
+}
+
+.experiance-container > *,
+.education-container > * {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.exp-title,
+.edu-title {
+  writing-mode: vertical-rl;
+  text-align: start;
+  padding-right: 1em;
+}
+
+.exp-text,
+.edu-text {
+}
+.exp,
+.edu {
+  justify-content: center;
+}
+
+/* PROJECTS */
 
 .projects {
-  top: 10%;
-  left: 50%;
-  transform: rotate(-180deg);
+  display: flex;
+  justify-content: center;
 }
 
 .contacts {
-  top: 50%;
-  left: 10%;
-  transform: rotate(-270deg);
+  display: flex;
+}
+
+/* PHONE / TABLET */
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+  }
+
+  .left-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 25%;
+    z-index: 1;
+  }
+
+  .profile-pic {
+    display: flex;
+    width: 40%;
+    align-self: center;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .right-container {
+    width: 100%;
+    height: 75%;
+  }
+  .item {
+    width: 100%;
+    height: 25%;
+  }
 }
