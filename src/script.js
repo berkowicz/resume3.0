@@ -89,8 +89,8 @@ async function loadResume() {
     for (let i = 0; i < data.education.length; i++) {
       const eduRole = document.createElement('em'),
         eduComp = document.createElement('em');
-      eduRole.classList = 'exp-role';
-      eduComp.classList = 'exp-comp';
+      eduRole.classList = 'edu-role';
+      eduComp.classList = 'edu-comp';
       document.querySelector('.edu-text').append(eduRole);
       document.querySelector('.edu-text').append(eduComp);
       eduRole.innerHTML = data.education[i].role + '<br>';
