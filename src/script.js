@@ -49,6 +49,7 @@ async function loadResume() {
     let data = await response.json();
     console.log(data);
 
+    //Creates container
     const expContainer = document.createElement('div'),
       eduContainer = document.createElement('div');
     expContainer.classList = 'exp';
@@ -56,6 +57,7 @@ async function loadResume() {
     document.querySelector('.experiance-container').append(expContainer);
     document.querySelector('.education-container').append(eduContainer);
 
+    //Creates Titles
     const expTitle = document.createElement('h2'),
       eduTitle = document.createElement('h2');
     expTitle.classList = 'exp-title';
@@ -65,6 +67,7 @@ async function loadResume() {
     document.querySelector('.exp').append(expTitle);
     document.querySelector('.edu').append(eduTitle);
 
+    //Creates Paragraphs
     const expText = document.createElement('p'),
       eduText = document.createElement('p');
     expText.classList = 'exp-text';
@@ -72,6 +75,7 @@ async function loadResume() {
     document.querySelector('.exp').append(expText);
     document.querySelector('.edu').append(eduText);
 
+    //Create emphasis tag in p and import data from json
     for (let i = 0; i < data.experiance.length; i++) {
       const expRole = document.createElement('em'),
         expComp = document.createElement('em');
@@ -82,8 +86,7 @@ async function loadResume() {
       expRole.innerHTML = data.experiance[i].role + '<br>';
       expComp.innerHTML = data.experiance[i].company + '<br><br>';
     }
-
-    for (let i = 0; i < data.experiance.length; i++) {
+    for (let i = 0; i < data.education.length; i++) {
       const eduRole = document.createElement('em'),
         eduComp = document.createElement('em');
       eduRole.classList = 'exp-role';
