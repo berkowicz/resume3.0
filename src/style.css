@@ -136,9 +136,11 @@ main {
   padding-right: 1em;
 }
 
-.exp-text,
-.edu-text {
+.exp-role,
+.edu-role {
+  font-weight: bold;
 }
+
 .exp,
 .edu {
   justify-content: center;

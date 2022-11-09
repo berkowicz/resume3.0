@@ -48,21 +48,53 @@ async function loadResume() {
   if (response.ok) {
     let data = await response.json();
     console.log(data);
+
+    const expContainer = document.createElement('div'),
+      eduContainer = document.createElement('div');
+    expContainer.classList = 'exp';
+    eduContainer.classList = 'edu';
+    document.querySelector('.experiance-container').append(expContainer);
+    document.querySelector('.education-container').append(eduContainer);
+
+    const expTitle = document.createElement('h2'),
+      eduTitle = document.createElement('h2');
+    expTitle.classList = 'exp-title';
+    eduTitle.classList = 'exp-title';
+    expTitle.textContent = data.exptitle;
+    eduTitle.textContent = data.edutitle;
+    document.querySelector('.exp').append(expTitle);
+    document.querySelector('.edu').append(eduTitle);
+
+    const expText = document.createElement('p'),
+      eduText = document.createElement('p');
+    expText.classList = 'exp-text';
+    eduText.classList = 'edu-text';
+    document.querySelector('.exp').append(expText);
+    document.querySelector('.edu').append(eduText);
+
+    for (let i = 0; i < data.experiance.length; i++) {
+      const expRole = document.createElement('em'),
+        expComp = document.createElement('em');
+      expRole.classList = 'exp-role';
+      expComp.classList = 'exp-comp';
+      document.querySelector('.exp-text').append(expRole);
+      document.querySelector('.exp-text').append(expComp);
+      expRole.innerHTML = data.experiance[i].role + '<br>';
+      expComp.innerHTML = data.experiance[i].company + '<br><br>';
+    }
+
+    for (let i = 0; i < data.experiance.length; i++) {
+      const eduRole = document.createElement('em'),
+        eduComp = document.createElement('em');
+      eduRole.classList = 'exp-role';
+      eduComp.classList = 'exp-comp';
+      document.querySelector('.edu-text').append(eduRole);
+      document.querySelector('.edu-text').append(eduComp);
+      eduRole.innerHTML = data.education[i].role + '<br>';
+      eduComp.innerHTML = data.education[i].company + '<br><br>';
+    }
   } else {
     console.log('HTTP-Error: ' + response.status);
   }
 }
 loadResume();
-
-const expContainer = document.createElement('div'),
-  eduContainer = document.createElement('div');
-expContainer.classList = 'exp';
-document.querySelector('.experiance-container').append(expContainer);
-eduContainer.classList = 'edu';
-document.querySelector('.education-container').append(eduContainer);
-
-const expTitle = document.createElement('h2'),
-  eduTitle = document.createElement('h2');
-
-expTitle.classList = 'exp-text';
-expTitle.textContent = data.resume.exptitle;

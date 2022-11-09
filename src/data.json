@@ -1,38 +1,36 @@
 {
-  "resume": {
-    "exptitle": "Experiance",
-    "edutitle": "Education",
-    "experiance": {
-      "exp0": {
-        "role": "E-commerce logistics",
-        "company": "House of Dagmar"
-      },
-      "exp1": {
-        "role": "Sales & Customer service",
-        "company": "Sundbybergs Stadsnät"
-      },
-      "exp2": {
-        "role": "Electrician",
-        "company": "Ravns Elektriska"
-      }
+  "exptitle": "Experience",
+  "edutitle": "Education",
+  "experiance": [
+    {
+      "role": "E-commerce logistics",
+      "company": "House of Dagmar"
     },
-    "education": {
-      "edu0": {
-        "role": "Fullstack Developer .NET",
-        "company": "Chass Academy"
-      },
-      "edu1": {
-        "role": "E-commerce logistics",
-        "company": "IHM Business School"
-      },
-      "edu2": {
-        "role": "Furniture Design & Crafting",
-        "company": "Grebbestads Folkhögskola"
-      },
-      "edu3": {
-        "role": "Electrician",
-        "company": "Nacka Gymnasium (High school)"
-      }
+    {
+      "role": "Sales & Customer service",
+      "company": "Sundbybergs Stadsnät"
+    },
+    {
+      "role": "Electrician",
+      "company": "Ravns Elektriska"
     }
-  }
+  ],
+  "education": [
+    {
+      "role": "Fullstack Developer .NET",
+      "company": "Chass Academy"
+    },
+    {
+      "role": "E-commerce logistics",
+      "company": "IHM Business School"
+    },
+    {
+      "role": "Furniture Design & Crafting",
+      "company": "Grebbestads Folkhögskola"
+    },
+    {
+      "role": "Electrician",
+      "company": "Nacka Gymnasium (High school)"
+    }
+  ]
 }
