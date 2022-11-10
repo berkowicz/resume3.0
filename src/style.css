@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
+  color: white;
 }
 
 html,
@@ -15,7 +16,14 @@ body,
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, black, purple);
+  /* background: linear-gradient(to bottom, black, rgb(71, 39, 39)); */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 28, 64, 1) 40%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .navigation {
@@ -57,6 +65,7 @@ main {
   max-width: 900px;
   box-shadow: 0 0 20px 5px black;
   border-radius: 20px;
+  min-width: 429px;
 }
 
 .left-container {
@@ -65,8 +74,8 @@ main {
   justify-content: space-around;
   width: 30%;
   height: 100%;
-  background-color: gray;
-  border-right: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.507);
+  border-right: 1px solid rgba(0, 0, 0, 0.582);
 }
 
 .profile-pic {
@@ -92,7 +101,7 @@ main {
   flex-direction: column;
   width: 70%;
   height: 400%;
-  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.507);
   transform: translateY(0%);
   transition: 500ms;
 }
@@ -106,6 +115,17 @@ main {
 
 .about {
   display: flex;
+}
+
+.about article > h2 {
+  padding-left: 8rem;
+  padding-top: 5rem;
+}
+
+.about p {
+  padding-top: 1rem;
+  padding-left: 8rem;
+  padding-right: 5rem;
 }
 
 /* RESUME */
@@ -126,7 +146,7 @@ main {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-around;
+  /*   justify-content: space-around; */
 }
 
 .exp-title,
@@ -143,7 +163,8 @@ main {
 
 .exp,
 .edu {
-  justify-content: center;
+  /* justify-content: center; */
+  padding-left: 8rem;
 }
 
 /* PROJECTS */
@@ -157,8 +178,7 @@ main {
   display: flex;
 }
 
-/* PHONE / TABLET */
-
+/* TABLET */
 @media screen and (max-width: 768px) {
   .left-container {
     display: none;
@@ -166,5 +186,31 @@ main {
 
   .right-container {
     width: 100%;
+  }
+
+  .exp,
+  .edu {
+    /* justify-content: center; */
+    padding-left: 4rem;
+  }
+
+  .about > article > * {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .about article > h2 {
+    padding-left: 4rem;
+    padding-top: 5rem;
+  }
+}
+
+/* PHONE */
+@media screen and (max-width: 500px) {
+  .navigation ul li {
+    margin: 15px;
+  }
+
+  .content-container {
+    height: 90vh;
   }
 }

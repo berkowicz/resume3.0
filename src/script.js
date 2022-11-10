@@ -7,35 +7,27 @@ const about = document.querySelector('.about-nav'),
   contacts = document.querySelector('.contacts-nav'),
   carousel = document.querySelector('.right-container');
 
-about.addEventListener('click', function (e) {
-  if (e.pointerId === 1) {
-    if (carousel.style.transform !== 'translateY(0%)') {
-      carousel.style.transform = 'translateY(0%)';
-    }
+about.addEventListener('click' || 'touchend', function (e) {
+  if (carousel.style.transform !== 'translateY(0%)') {
+    carousel.style.transform = 'translateY(0%)';
   }
 });
 
-resume.addEventListener('click', function (e) {
-  if (e.pointerId === 1) {
-    if (carousel.style.transform !== 'translateY(-25%)') {
-      carousel.style.transform = 'translateY(-25%)';
-    }
+resume.addEventListener('click' || 'touchend', function (e) {
+  if (carousel.style.transform !== 'translateY(-25%)') {
+    carousel.style.transform = 'translateY(-25%)';
   }
 });
 
-projects.addEventListener('click', function (e) {
-  if (e.pointerId === 1) {
-    if (carousel.style.transform !== 'translateY(-50%)') {
-      carousel.style.transform = 'translateY(-50%)';
-    }
+projects.addEventListener('click' || 'touchend', function (e) {
+  if (carousel.style.transform !== 'translateY(-50%)') {
+    carousel.style.transform = 'translateY(-50%)';
   }
 });
 
-contacts.addEventListener('click', function (e) {
-  if (e.pointerId === 1) {
-    if (carousel.style.transform !== 'translateY(-75%)') {
-      carousel.style.transform = 'translateY(-75%)';
-    }
+contacts.addEventListener('click' || 'touchend', function (e) {
+  if (carousel.style.transform !== 'translateY(-75%)') {
+    carousel.style.transform = 'translateY(-75%)';
   }
 });
 
