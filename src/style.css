@@ -60,7 +60,7 @@ main {
   align-self: center;
   overflow: hidden;
   width: 90vw;
-  height: 70vh;
+  height: 90vh;
   max-width: 900px;
   box-shadow: 0 0 20px 5px black;
   border-radius: 20px;
@@ -231,9 +231,5 @@ main {
 @media screen and (max-width: 500px) {
   .navigation ul li {
     margin: 15px;
-  }
-
-  .content-container {
-    height: 90vh;
   }
 }
