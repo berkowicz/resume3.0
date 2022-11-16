@@ -1,4 +1,3 @@
-'use strict';
 const board = [];
 const columns = 10;
 const rows = 10;

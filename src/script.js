@@ -1,5 +1,3 @@
-'use strict';
-
 //Contolls carousell when clicking navigation
 const about = document.querySelector('.about-nav'),
   resume = document.querySelector('.resume-nav'),
